@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://bytkb6h0ctxhh"]
+
+[ext_resource type="Theme" uid="uid://c7dqe3bqvrwvx" path="res://default_theme.tres" id="1_0fbet"]
+[ext_resource type="Script" uid="uid://ck46t5t8mqkg5" path="res://menu.gd" id="2_qtu10"]
+[ext_resource type="Script" uid="uid://bm8ksmub5mqlp" path="res://page_one.gd" id="3_ee4bf"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ai3kb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ai3kb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p1q0g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbped"]
+bg_color = Color(0.1432732, 0.12986249, 0.12762833, 0.7137255)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="MenuScene" type="Control" unique_id=2042979593]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0fbet")
+
+[node name="MainBackground" type="TextureRect" parent="." unique_id=726888346]
+modulate = Color(0.21960784, 0.6901961, 0.44705883, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_ai3kb")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1754544474]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -303.0
+offset_top = -158.5
+offset_right = 303.0
+offset_bottom = 158.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+
+[node name="Menu" type="VBoxContainer" parent="PanelContainer" unique_id=1082462760]
+layout_mode = 2
+script = ExtResource("2_qtu10")
+
+[node name="Title" type="Label" parent="PanelContainer/Menu" unique_id=1421213800]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Test Menu"
+
+[node name="PageContainer" type="Control" parent="PanelContainer/Menu" unique_id=1061787443]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PageOne" type="GridContainer" parent="PanelContainer/Menu/PageContainer" unique_id=1148203574]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+columns = 2
+script = ExtResource("3_ee4bf")
+
+[node name="Button" type="Button" parent="PanelContainer/Menu/PageContainer/PageOne" unique_id=614561236]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ai3kb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p1q0g")
+text = "Button 1"
+
+[node name="Button2" type="Button" parent="PanelContainer/Menu/PageContainer/PageOne" unique_id=1558537497]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ai3kb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p1q0g")
+text = "Button 2"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/Menu" unique_id=121123289]
+custom_maximum_size = Vector2(-1, 40)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 2
+
+[node name="PageLeft" type="Button" parent="PanelContainer/Menu/HBoxContainer" unique_id=2073842809]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_kbped")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kbped")
+text = "<"
+
+[node name="PageRight" type="Button" parent="PanelContainer/Menu/HBoxContainer" unique_id=1028507869]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_kbped")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kbped")
+text = ">"
