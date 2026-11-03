@@ -115,3 +115,6 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_kbped")
 theme_override_styles/hover = SubResource("StyleBoxFlat_kbped")
 text = ">"
+
+[connection signal="button_down" from="PanelContainer/Menu/HBoxContainer/PageLeft" to="PanelContainer/Menu" method="button_handler" binds= [false]]
+[connection signal="button_down" from="PanelContainer/Menu/HBoxContainer/PageRight" to="PanelContainer/Menu" method="button_handler" binds= [true]]
