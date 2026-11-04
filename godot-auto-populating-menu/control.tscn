@@ -6,10 +6,6 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ai3kb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ai3kb"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p1q0g"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbped"]
 bg_color = Color(0.1432732, 0.12986249, 0.12762833, 0.7137255)
 corner_radius_top_left = 6
@@ -69,7 +65,7 @@ text = "Test Menu"
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="PageOne" type="GridContainer" parent="PanelContainer/Menu/PageContainer" unique_id=1148203574]
+[node name="PageOne" type="GridContainer" parent="PanelContainer/Menu/PageContainer" unique_id=805419826]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -79,20 +75,7 @@ grow_vertical = 2
 size_flags_vertical = 3
 columns = 2
 script = ExtResource("3_ee4bf")
-
-[node name="Button" type="Button" parent="PanelContainer/Menu/PageContainer/PageOne" unique_id=614561236]
-layout_mode = 2
-size_flags_horizontal = 6
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ai3kb")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_p1q0g")
-text = "Button 1"
-
-[node name="Button2" type="Button" parent="PanelContainer/Menu/PageContainer/PageOne" unique_id=1558537497]
-layout_mode = 2
-size_flags_horizontal = 6
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ai3kb")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_p1q0g")
-text = "Button 2"
+metadata/_custom_type_script = "uid://bm8ksmub5mqlp"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/Menu" unique_id=121123289]
 custom_maximum_size = Vector2(-1, 40)

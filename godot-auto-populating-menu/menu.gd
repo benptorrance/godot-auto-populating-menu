@@ -12,14 +12,15 @@ func populate_menu() -> void:
 	var page_index = 0
 	while button_num > 0:
 		var cur_page = page_cont.get_child(page_index)
-		for i in range(8):
-			if cur_page.get_children().size() >= 8:
+		print(cur_page)
+		for i in range(9):
+			if cur_page.get_children().size() < 8 && button_num > 0:
+				cur_page.add_button(i)
+				button_num -= 1
+			elif button_num !=0:
 				print("Added Child")
 				add_page()
 				break
-			else:
-				cur_page.add_button(i)
-				button_num -= 1
 		page_index += 1
 	pass
 
@@ -29,6 +30,7 @@ func add_page()-> void:
 	new_page.columns = 2
 	new_page.set_anchors_preset(PRESET_FULL_RECT)
 	page_cont.add_child(new_page)
+	print(page_cont.get_children())
 	pass
 
 ##This function handles moving between the existing pages after they have been
